@@ -13,6 +13,10 @@ export default {
       },
       maxWidth: {
         550:'34.375rem',
+      },
+      borderWidth:{
+        1: '1px',
+      
       }
     },
   },
