@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import memeData from '../memeData'
 
 function Meme() {
     // display random url images of the memes
+    const [memeImage, setMemeImage] = useState('')
     function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
         const { data: { memes } } = memeData
         e.preventDefault()
-        console.log(memes[Math.floor(Math.random() * memes.length)].url)
+        setMemeImage(memes[Math.floor(Math.random() * memes.length)].url)
     }
     return (
         <div className='p-5'>
@@ -21,6 +22,7 @@ function Meme() {
                 </div>
                 <button onClick={handleClick} className=' col-span-2 rounded-md w-full  text-white  font-bold text-base tracking-tighter py-2 bg-gradient-to-r from-secondary to-linear-purple'>Get a new meme image  🖼</button>
             </form>
+            {memeImage && <img className='mt-5 max-w-sm m-auto w-full' src={memeImage} alt='memeImage' />}
         </div>
     )
 }
