@@ -1,27 +1,8 @@
 import React, { useState } from 'react'
 import memeData from '../memeData'
+import { AllMemeImagesType, MemeType } from '../types'
 
-type MemeType = {
-    topText: string
-    bottomText: string
-    randomImage: string
-}
 
-type MemeImageType = {
-    "id": string,
-    "name": string,
-    "url": string,
-    "width": number,
-    "height": number,
-    "box_count": number
-}
-
-type AllMemeImagesType = {
-    "success": boolean,
-    "data": {
-        "memes": MemeImageType[]
-    }
-}
 function Meme() {
     // display random url images of the memes
     const [meme, setMeme] = useState<MemeType>({
