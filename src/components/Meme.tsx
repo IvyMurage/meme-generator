@@ -43,7 +43,6 @@ function Meme() {
                 {meme.topText.length > 0 && <h2 className='absolute  font-bold text-white top-0 left-1/2 -translate-x-1/2 text-xl py-5 drop-shadow-custom'>{meme.topText}</h2>}
                 {meme.bottomText.length > 0 && <h2 className='absolute  font-bold text-white bottom-0 left-1/2 -translate-x-1/2 text-xl py-5 drop-shadow-custom'>{meme.bottomText}</h2>}
             </div>
-
         </div>
     )
 }
