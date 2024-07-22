@@ -17,6 +17,19 @@ export default {
       borderWidth:{
         1: '1px',
       
+      },
+      dropShadow:{
+        custom:
+         [ '2px 2px 0 #000',
+        '-2px -2px 0 #000',
+        '2px -2px 0 #000',
+        '-2px 2px 0 #000',
+        '0 2px 0 #000',
+        '2px 0 0 #000',
+        '0 -2px 0 #000',
+        '-2px 0 0 #000',
+        '2px 2px 5px #000']
+
       }
     },
   },
